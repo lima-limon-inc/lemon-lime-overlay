@@ -29,7 +29,5 @@ RDEPEND="
 
 src_install() {
 	distutils-r1_src_install
-	# mv ${D}/usr/etc ${D}/etc
 }
 
-#distutils_enable_tests pytest
