@@ -16,6 +16,7 @@ SRC_URI="https://github.com/parrt/dtreeviz/archive/refs/tags/${PV}.tar.gz -> ${P
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64"
+IUSE="test"
 
 RDEPEND="
 	>=dev-python/graphviz-0.9
@@ -24,9 +25,6 @@ RDEPEND="
 	sci-libs/scikit-learn
 	dev-python/matplotlib
 	dev-python/colour
-	dev-python/pytest
 "
 
-src_install() {
-	distutils-r1_src_install
-}
+DEPEND="test? ( dev-python/pytest )"
