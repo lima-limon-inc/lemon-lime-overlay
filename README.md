@@ -4,6 +4,10 @@ Pull requests more than welcome.
 
 UPDATE: I have accepted into GURU! \\:D/. I will upload all of my ebuilds there
 and I'll leave this repo for testing purposes:
+## Master branch
+- https://github.com/gentoo/guru/commit/302da03ef6e802409cbd6eddf893211d601ade4e
+
+## Dev branch
 - https://github.com/gentoo/guru/commit/7852b9600d549070c7f360136f96796a714fe57b
 
 
