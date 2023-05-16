@@ -28,3 +28,5 @@ RDEPEND="
 "
 
 DEPEND="test? ( dev-python/pytest )"
+
+distutils_enable_tests pytest
