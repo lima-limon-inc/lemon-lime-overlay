@@ -1,0 +1,15 @@
+Avoids using toml dependency (deprecated and masked)
+Patch by Tomas Fabrizio Orsi
+https://bugs.gentoo.org/878651
+
+--- a/jupytext/contentsmanager.py
++++ b/jupytext/contentsmanager.py
+@@ -511,7 +511,7 @@ to your jupytext.toml file
+ 
+             pyproject_path = directory + "/" + PYPROJECT_FILE
+             if self.file_exists(pyproject_path):
+-                import toml
++                import tomllib as toml
+ 
+                 model = self.get(pyproject_path, type="file")
+                 doc = toml.loads(model["content"])
