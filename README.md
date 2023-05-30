@@ -2,8 +2,7 @@
 My personal Gentoo overlay. 
 Pull requests more than welcome.
 
-UPDATE: I have accepted into GURU! \\:D/. I will upload all of my ebuilds there
-and I'll leave this repo for testing purposes:
+UPDATE: I have been accepted into GURU! \\:D/. 
 ## Master branch
 - https://github.com/gentoo/guru/commit/302da03ef6e802409cbd6eddf893211d601ade4e
 
