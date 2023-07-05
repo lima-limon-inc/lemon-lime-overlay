@@ -9,11 +9,13 @@ if [[ ${PV} == 9999 ]] ; then
 	EGIT_REPO_URI="https://github.com/pog102/devify.git"
 	EGIT_BRANCH="main"
 	inherit git-r3
+else
+	SRC_URI="https://github.com/pog102/devify/archive/refs/tags/v${P}.tar.gz"
 fi
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="~amd64"
 
 DEPEND="x11-libs/libnotify"
 RDEPEND="${DEPEND}"
@@ -25,7 +27,10 @@ src_unpack() {
 	fi
 }
 
-PATCHES=( "${FILESDIR}/gentoo-directories.patch" )
+PATCHES=(
+	"${FILESDIR}/different-directories-makefile.patch"
+	"${FILESDIR}/different-directories-script.patch"
+)
 
 pkg_postinst() {
 	udevadm control --reload-rules
