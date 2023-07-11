@@ -1,19 +1,14 @@
 diff --git a/Makefile b/Makefile
-index 1ea846e..93cea41 100644
+index d186eb3..93cea41 100644
 --- a/Makefile
 +++ b/Makefile
-@@ -1,10 +1,10 @@
+@@ -1,6 +1,6 @@
  TARGET      = devify
  
 -PREFIX     ?= /usr/local
-+PREFIX     ?= /usr
++PREFIX     ?= /usr/
  INSTALL     = install -Dm755
  RM         ?= rm -f
- 
--DESTINATIONUDEV = $(DESTDIR)/usr/lib/udev/rules.d/
-+DESTINATIONUDEV = $(DESTDIR)/lib/udev/rules.d/
- DESTINATIONBIN = $(DESTDIR)$(PREFIX)/bin/
- 
  
 @@ -14,7 +14,7 @@ install: $(TARGET)
  	
@@ -33,3 +28,25 @@ index 1ea846e..93cea41 100644
  
  clean:
  	$(RM) ./devify
+diff --git a/devify b/devify
+index 0e16e14..6419515 100755
+--- a/devify
++++ b/devify
+@@ -1,13 +1,14 @@
+ #!/usr/bin/env bash
+ 
+ status=$2
+-icon_pack=/usr/local/share/icons/MonoDev
++icon_pack=/usr/share/icons/MonoDev
+ user=$(who | head -n 1 | awk '{print $1}')
+ wal_dir=/home/$user/.cache/wal/colors
+ icon_color=$(grep -oP '#.*([A-Za-z]|[0-9])' $icon_pack/main_color.svg)
+ 
+-DBUS_SESSION_BUS_ADDRESS=unix:path="/run/user/$( id -u "$user" )/bus"
+-export DBUS_SESSION_BUS_ADDRESS
++# DBUS_SESSION_BUS_ADDRESS=unix:path="/run/user/$( id -u "$user" )/bus"
++# export DBUS_SESSION_BUS_ADDRESS
++export DISPLAY=:0
+ 
+ notify() {
+   if [ "$status" == "add" ]; then
