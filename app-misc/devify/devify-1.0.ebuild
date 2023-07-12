@@ -3,6 +3,8 @@
 
 EAPI=8
 
+inherit udev
+
 DESCRIPTION="Device notification system using udev rules for monitoring connections"
 HOMEPAGE="https://github.com/pog102/devify"
 # if [[ ${PV} == 9999 ]] ; then
@@ -22,15 +24,20 @@ RDEPEND="${DEPEND}"
 BDEPEND=""
 
 PATCHES=(
-	"${FILESDIR}/different-directories.patch"
+	"${FILESDIR}/different-directories-makefile.patch"
+	"${FILESDIR}/different-directories-script.patch"
 )
 
 pkg_postinst() {
-	udevadm control --reload-rules
+ 	udev_reload
 	elog "Besides changing directory destinations, the ebuild also"
 	elog "changes one thing about the script. Instead of using"
 	elog "DBUS_SESSION_BUS_ADDRESS it uses DISPLAY."
 	elog "Without it, it would not work in my machine. If it leads"
 	elog "to unintended behavior, leave and issue on the lemon-lime-overlay"
 	elog "Cheers!"
+}
+
+pkg_postrm() {
+	udev_reload
 }
