@@ -1,0 +1,35 @@
+diff --git a/Makefile b/Makefile
+index e48f96a..e044fb5 100644
+--- a/Makefile
++++ b/Makefile
+@@ -1,10 +1,10 @@
+ TARGET      = devify
+ 
+-PREFIX     ?= /usr/local
++PREFIX     ?= /usr
+ INSTALL     = install -Dm755
+ RM         ?= rm -f
+ 
+-DESTINATIONUDEV = $(DESTDIR)/usr/lib/udev/rules.d/
++DESTINATIONUDEV = $(DESTDIR)/lib/udev/rules.d/
+ DESTINATIONBIN = $(DESTDIR)$(PREFIX)/bin/
+ 
+ 
+@@ -14,7 +14,7 @@ install: $(TARGET)
+ 	
+ 	mkdir -p $(DESTDIR)$(PREFIX)/bin
+ 	$(INSTALL) $(TARGET) $(DESTINATIONBIN)$(TARGET)
+-	install -Dm644 devify.rules $(DESTINATIONUDEV)99-devify.rules
++	install -Dm644 devify.rules $(DESTINATIONUDEV)60-devify.rules
+ 	mkdir -p $(DESTDIR)$(PREFIX)/share/icons
+ 	install -d $(DESTDIR)$(PREFIX)/share/icons/MonoDev
+ 	install -d $(DESTDIR)$(PREFIX)/share/sounds/MonoDev
+@@ -26,7 +26,7 @@ uninstall: $(TARGET)
+ 	rm $(DESTINATIONBIN)$(TARGET)
+ 	rm -rf $(DESTDIR)$(PREFIX)/share/icons/MonoDev
+ 	rm -rf $(DESTDIR)$(PREFIX)/share/sounds/MonoDev
+-	rm $(DESTINATIONUDEV)99-devify.rules
++	rm $(DESTINATIONUDEV)60-devify.rules
+ 
+ clean:
+ 	$(RM) ./devify
