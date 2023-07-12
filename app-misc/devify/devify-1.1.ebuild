@@ -19,7 +19,10 @@ LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64"
 
-DEPEND="x11-libs/libnotify"
+DEPEND="
+	x11-libs/libnotify
+	media-libs/libcanberra
+	"
 RDEPEND="${DEPEND}"
 BDEPEND=""
 
