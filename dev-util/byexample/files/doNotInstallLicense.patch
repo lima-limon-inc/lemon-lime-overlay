@@ -1,0 +1,12 @@
+diff --git a/setup.py b/setup.py
+index 3ea678f..aede3fb 100644
+--- a/setup.py
++++ b/setup.py
+@@ -113,7 +113,6 @@ setup(
+     keywords='doctest documentation test testing',
+ 
+     packages=['byexample', 'byexample.modules'],
+-    data_files=[("", ["LICENSE"])],
+     package_data={'byexample':["modules/gadgets/*"]},
+ 
+     entry_points={

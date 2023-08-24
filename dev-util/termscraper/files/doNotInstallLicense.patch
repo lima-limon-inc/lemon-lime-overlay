@@ -1,0 +1,11 @@
+diff --git a/setup.py b/setup.py
+index 157032d..3e1e664 100644
+--- a/setup.py
++++ b/setup.py
+@@ -80,6 +80,5 @@ setup(
+     keywords=["scraper", "pyte", "vt102", "vte", "terminal emulator"],
+ 
+     packages=['termscraper'],
+-    data_files=[("", ["LICENSE"])]
+ )
+ 
