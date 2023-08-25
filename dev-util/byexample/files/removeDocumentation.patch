@@ -1,0 +1,35 @@
+diff --git a/setup.py b/setup.py
+index 3ea678f..9d1c20e 100644
+--- a/setup.py
++++ b/setup.py
+@@ -9,29 +9,7 @@ import sys, re
+ 
+ here = path.abspath(path.dirname(__file__))
+ 
+-try:
+-    system('''pandoc -f markdown-raw_html -o '%(dest_rst)s' '%(src_md)s' ''' % {
+-                'dest_rst': path.join(here, 'README.rst'),
+-                'src_md':   path.join(here, 'README.md'),
+-                })
+-
+-    with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
+-        long_description = f.read()
+-
+-    # strip out any HTML comment|tag
+-    long_description = re.sub(r'<!--.*?-->', '', long_description,
+-                                                flags=re.DOTALL|re.MULTILINE)
+-    long_description = re.sub(r'<img.*?src=.*?>', '', long_description,
+-                                                flags=re.DOTALL|re.MULTILINE)
+-
+-    with open(path.join(here, 'README.rst'), 'w', encoding='utf-8') as f:
+-        f.write(long_description)
+-
+-except:
+-    print("Generation of the documentation failed. " + \
+-          "Do you have 'pandoc' installed?")
+-
+-    long_description = __doc__
++long_description=""
+ 
+ # load __version__, __doc__, _author, _license and _url
+ exec(open(path.join(here, 'byexample', '__init__.py')).read())
