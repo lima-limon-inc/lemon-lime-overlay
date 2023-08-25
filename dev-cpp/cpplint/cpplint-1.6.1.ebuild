@@ -18,8 +18,5 @@ KEYWORDS="~amd64"
 DEPEND=""
 RDEPEND="${DEPEND}"
 BDEPEND=""
-# Copyright 2023 Gentoo Authors
-# Distributed under the terms of the GNU General Public License v2
-
 
 distutils_enable_tests pytest
