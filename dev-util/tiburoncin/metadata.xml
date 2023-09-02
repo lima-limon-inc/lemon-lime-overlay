@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM 'https://www.gentoo.org/dtd/metadata.dtd'>
+<pkgmetadata>
+	<maintainer type="person">
+		<email>torsi@fi.uba.ar</email>
+		<name>Tomas Fabrizio Orsi</name>
+	</maintainer>
+	<longdescription>Small man in the middle tool to inspect the traffic between two endpoints A and B. Mostly used by students wanting to know what data is flowing in a TCP channel.</longdescription>
+	<upstream>
+		<remote-id type="github">eldipa/tiburoncin</remote-id>
+	</upstream>
+</pkgmetadata>
