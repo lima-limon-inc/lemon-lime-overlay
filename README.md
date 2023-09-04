@@ -2,9 +2,12 @@
 My personal Gentoo overlay. 
 Pull requests more than welcome.
 
-UPDATE: I have been accepted into GURU! \\:D/. 
-## Master branch
-- https://github.com/gentoo/guru/commit/302da03ef6e802409cbd6eddf893211d601ade4e
+# Ebuilds in this overlay
 
-## Dev branch
-- https://github.com/gentoo/guru/commit/7852b9600d549070c7f360136f96796a714fe57b
+- tiburoncin: https://github.com/eldipa/tiburoncin
+
+- cpplint: https://github.com/cpplint/cpplint (fork of google's original cpplint)
+
+- devify: https://github.com/pog102/devify
+
+- byexample: https://github.com/byexamples/byexample
