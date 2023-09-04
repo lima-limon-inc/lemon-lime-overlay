@@ -1,0 +1,11 @@
+DEFINED_PHASES=postinst
+DEPEND=x11-libs/libnotify
+DESCRIPTION=Device notification system using udev rules for monitoring connections
+EAPI=8
+HOMEPAGE=https://github.com/pog102/devify
+KEYWORDS=~amd64
+LICENSE=MIT
+RDEPEND=x11-libs/libnotify
+SLOT=0
+SRC_URI=https://github.com/pog102/devify/archive/refs/tags/v1.0.tar.gz
+_md5_=905ee4505b44475cb28aacfd85a4548b
