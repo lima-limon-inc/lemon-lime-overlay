@@ -1,5 +1,5 @@
 # LL's overlay
-My personal Gentoo overlay. 
+My personal Gentoo overlay.
 Pull requests more than welcome.
 
 # Ebuilds in this overlay
@@ -11,3 +11,5 @@ Pull requests more than welcome.
 - devify: https://github.com/pog102/devify
 
 - byexample: https://github.com/byexamples/byexample
+
+- sdl2cpp: https://github.com/libSDL2pp/libSDL2pp
