@@ -17,7 +17,7 @@ KEYWORDS="~amd64"
 DEPEND="
 	media-libs/libsdl2
 	media-libs/sdl2-image
-	media-libs/sdl2-mixer
+	>=media-libs/sdl2-mixer-2.6.3
 	media-libs/sdl2-ttf
 	"
 RDEPEND="${DEPEND}"
