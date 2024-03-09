@@ -21,7 +21,7 @@ DEPEND="
 	media-libs/sdl2-ttf
 	"
 RDEPEND="${DEPEND}"
-BDEPEND="dev-util/cmake"
+BDEPEND="dev-build/cmake"
 
 src_prepare() {
 	cmake_src_prepare
