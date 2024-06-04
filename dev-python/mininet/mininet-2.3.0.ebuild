@@ -14,6 +14,9 @@ LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64"
 
-RDEPEND=""
+RDEPEND="
+	net-misc/openvswitch
+	dev-util/mnexec
+"
 DEPEND="${RDEPEND}"
 BDEPEND=""
