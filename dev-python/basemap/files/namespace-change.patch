@@ -1,0 +1,55 @@
+From cbe0cb6fc45b34e30675bad65a770ac292cb155d Mon Sep 17 00:00:00 2001
+From: Kyle Sunden <git@ksunden.space>
+Date: Thu, 8 Jun 2023 16:42:59 -0500
+Subject: [PATCH 1/3] Convert to new style namespace packages
+
+---
+
+--- a/setup.py
++++ b/setup.py
+@@ -10,6 +10,6 @@
+ import glob
+ import warnings
+ from setuptools import setup
+-from setuptools import find_packages
++from setuptools import find_namespace_packages
+ from setuptools.command.sdist import sdist
+ from setuptools.extension import Extension
+
+
+--- a/setup.py
++++ b/setup.py
+@@ -230,7 +230,7 @@ def run(self):
+     "package_dir":
+         {"": "src"},
+     "packages":
+-        find_packages(where="src"),
++        find_namespace_packages(where="src"),
+     "ext_modules":
+         ext_modules,
+     "data_files":
+
+
+--- a/src/mpl_toolkits/__init__.py
++++ /dev/null
+@@ -1,6 +0,0 @@
+-from __future__ import (absolute_import, division, print_function)
+-
+-try:
+-    __import__('pkg_resources').declare_namespace(__name__)
+-except ImportError:
+-    pass # must not have setuptools
+
+
+--- a/setup.py
++++ b/setup.py
+@@ -224,9 +224,6 @@ def run(self):
+         "maps",
+         "plots",
+     ],
+-    "namespace_packages": [
+-        "mpl_toolkits",
+-    ],
+     "package_dir":
+         {"": "src"},
+     "packages":

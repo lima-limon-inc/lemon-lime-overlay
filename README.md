@@ -28,3 +28,5 @@ emaint sync -r lemon-lime
 - sdl2cpp: https://github.com/libSDL2pp/libSDL2pp
 
 - mininet: https://github.com/mininet/mininet
+
+- Matplotlib's basemap: https://github.com/matplotlib/basemap
