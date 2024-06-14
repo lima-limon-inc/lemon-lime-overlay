@@ -1,1 +1,2 @@
 *.ebuild linguist-detectable
+*.md linguist-detectable
