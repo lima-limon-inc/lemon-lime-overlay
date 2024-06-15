@@ -8,17 +8,18 @@ inherit distutils-r1
 
 DESCRIPTION="Emulator for rapid prototyping of Software Defined Networks"
 HOMEPAGE="https://mininet.org/"
-SRC_URI="https://github.com/mininet/mininet/archive/refs/tags/${PV}.tar.gz"
+SRC_URI="https://github.com/mininet/mininet/archive/refs/tags/${PV}.tar.gz -> ${P}.gh.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64"
+IUSE="xterm"
 
 RDEPEND="
 	net-misc/openvswitch
 	dev-util/mnexec
 	x11-apps/xhost
-	x11-terms/xterm
+	xterm? ( x11-terms/xterm )
 "
 DEPEND="${RDEPEND}"
 BDEPEND=""
