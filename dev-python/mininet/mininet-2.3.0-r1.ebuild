@@ -17,6 +17,8 @@ KEYWORDS="~amd64"
 RDEPEND="
 	net-misc/openvswitch
 	dev-util/mnexec
+	x11-apps/xhost
+	x11-terms/xterm
 "
 DEPEND="${RDEPEND}"
 BDEPEND=""
