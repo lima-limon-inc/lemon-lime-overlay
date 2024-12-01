@@ -1,0 +1,14 @@
+BDEPEND=>=app-editors/emacs-25.3:*
+DEFINED_PHASES=compile configure info install postinst postrm prepare setup test unpack
+DEPEND=app-emacs/reformatter
+DESCRIPTION=Emacs mode for uiua, a stack-based array language
+EAPI=8
+HOMEPAGE=https://github.com/crmsnbleyd/uiua-mode
+INHERIT=elisp
+KEYWORDS=~amd64
+LICENSE=GPL-3
+RDEPEND=app-emacs/reformatter >=app-editors/emacs-25.3:*
+SLOT=0
+SRC_URI=https://github.com/crmsnbleyd/uiua-mode/archive/refs/tags/v0.1.0.tar.gz -> uiua-mode-0.1.0.tar.gz
+_eclasses_=elisp-common	abb2dda42f680fce87602c8273f832c7	elisp	e7149f29f0c141396a0cec7cc59947a6
+_md5_=2ccbaa85aa4cb5acab0b8b16146c4ee2

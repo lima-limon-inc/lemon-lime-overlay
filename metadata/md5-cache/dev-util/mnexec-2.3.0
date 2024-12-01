@@ -1,0 +1,11 @@
+DEFINED_PHASES=compile install
+DESCRIPTION=Emulator for rapid prototyping of Software Defined Networks
+EAPI=8
+HOMEPAGE=https://mininet.org/
+INHERIT=toolchain-funcs
+KEYWORDS=~amd64
+LICENSE=BSD
+SLOT=0
+SRC_URI=https://github.com/mininet/mininet/archive/refs/tags/2.3.0.tar.gz -> mnexec.tar.gz
+_eclasses_=toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0
+_md5_=f62321580cf9826d08862eb514a675f7
